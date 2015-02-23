@@ -1,5 +1,4 @@
-# this travis.yml file is for the repo
-
+# this travis.yml file is for the leaderboard-nightwatch example, when run standalone
 language: node_js
 
 node_js:
@@ -12,7 +11,6 @@ cache:
   directories:
     - .meteor/local/build/programs/server/assets/packages
     - .meteor
-
 #    - node_modules
 #    - webapp/node_modules
 
@@ -26,16 +24,15 @@ before_install:
   - "sh -e /etc/init.d/xvfb start"
   # set the xvfb screen size to 1280x1024x16
   - "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
-
   # install meteor
   - "curl https://install.meteor.com | /bin/sh"
   # setup Meteor app
-  # - "cd leaderboard-nightwatch"
+  - "cd webapp"
     # Optionally we can update all our dependencies here
-  - "meteor update"
+    #- "meteor update"
   - "meteor reset"
-#  - "meteor -p 3000 &"
+  - "meteor -p 3000 &"
   # give Meteor some time to download packages, init data, and to start
   - "sleep 50"
 
-script: meteor --test
+script: ./run_nightwatch.sh
