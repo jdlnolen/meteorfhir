@@ -30,12 +30,13 @@ before_install:
   - "sh -e /etc/init.d/xvfb start"
   # set the xvfb screen size to 1280x1024x16
   - "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
+  - "phantomjs"
   # install meteor
   - "curl https://install.meteor.com | /bin/sh"
   # setup Meteor app
 #  - "cd webapp"
     # Optionally we can update all our dependencies here
-  - "meteor add xolvio:cucumber"
+#  - "meteor add xolvio:cucumber"
   - "meteor update"
 #  - "meteor reset"
 #  - "meteor -p 3000 &"
