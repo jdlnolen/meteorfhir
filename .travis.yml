@@ -1,4 +1,5 @@
 # this travis.yml file is for the leaderboard-nightwatch example, when run standalone
+
 language: node_js
 
 node_js:
@@ -12,7 +13,6 @@ cache:
     - .meteor/local/build/programs/server/assets/packages
     - .meteor
 #    - node_modules
-#    - webapp/node_modules
 
 before_install:
   # set up the node_modules dir, so we know where it is
