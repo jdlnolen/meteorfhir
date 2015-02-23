@@ -35,6 +35,7 @@ before_install:
   # setup Meteor app
 #  - "cd webapp"
     # Optionally we can update all our dependencies here
+  - "meteor add xolvio:cucumber"
   - "meteor update"
 #  - "meteor reset"
 #  - "meteor -p 3000 &"
