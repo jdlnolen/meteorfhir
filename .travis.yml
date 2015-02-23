@@ -1,6 +1,10 @@
 # this travis.yml file is for the leaderboard-nightwatch example, when run standalone
 language: node_js
 
+env:
+   global:
+      - PHANTOM_PATH=$PATH
+
 node_js:
   - "0.10"
 
