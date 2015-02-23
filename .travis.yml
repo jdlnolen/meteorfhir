@@ -10,7 +10,9 @@ services:
 
 cache:
   directories:
-    - ~/.meteor
+    - .meteor/local/build/programs/server/assets/packages
+    - .meteor
+
 #    - node_modules
 #    - webapp/node_modules
 
