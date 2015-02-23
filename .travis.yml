@@ -20,6 +20,7 @@ before_install:
   # install nightwatch, so we know where it is
 #  - "npm install nightwatch"
 #   - "npm install -g phantomjs"
+  - "npm install selenium-webdriver"
   # fire up xvfb on port :99.0
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
