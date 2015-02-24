@@ -1,4 +1,4 @@
-# this travis.yml file
+# this travis.yml file is for meteorfhir
 
 language: node_js
 
